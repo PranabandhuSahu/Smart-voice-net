@@ -1,21 +1,23 @@
 package com.smartvoicenet.model;
 
+import com.smartvoicenet.model.gramatical.GramaticalObj;
+import com.smartvoicenet.model.hotspot.HotspotObj;
+import com.smartvoicenet.model.smartprobe.SmartProbeObj;
+import com.smartvoicenet.model.urgency.UrgencyObj;
+
 public class ExplainResult {
 	
-	private String inspectionResult; // Test
+	private HotspotObj hotspot;
 	private String authScore;
 	private String repeatationIndicator;
-	private String grammaticalError;
-	private String sensitiveHotspot;
-	private String urgencyIndicator;
-	private String smartProbeError;
-	private String smartProbeErrorQs;
-	
-	public String getInspectionResult() {
-		return inspectionResult;
+	private GramaticalObj grammaticalObj;
+	private UrgencyObj urgencyObj;
+	private SmartProbeObj smartProbeObj;
+	public HotspotObj getHotspot() {
+		return hotspot;
 	}
-	public void setInspectionResult(String inspectionResult) {
-		this.inspectionResult = inspectionResult;
+	public void setHotspot(HotspotObj hotspot) {
+		this.hotspot = hotspot;
 	}
 	public String getAuthScore() {
 		return authScore;
@@ -29,36 +31,23 @@ public class ExplainResult {
 	public void setRepeatationIndicator(String repeatationIndicator) {
 		this.repeatationIndicator = repeatationIndicator;
 	}
-	public String getGrammaticalError() {
-		return grammaticalError;
+	public GramaticalObj getGrammaticalObj() {
+		return grammaticalObj;
 	}
-	public void setGrammaticalError(String grammaticalError) {
-		this.grammaticalError = grammaticalError;
+	public void setGrammaticalObj(GramaticalObj grammaticalObj) {
+		this.grammaticalObj = grammaticalObj;
 	}
-	public String getSensitiveHotspot() {
-		return sensitiveHotspot;
+	public UrgencyObj getUrgencyObj() {
+		return urgencyObj;
 	}
-	public void setSensitiveHotspot(String sensitiveHotspot) {
-		this.sensitiveHotspot = sensitiveHotspot;
+	public void setUrgencyObj(UrgencyObj urgencyObj) {
+		this.urgencyObj = urgencyObj;
 	}
-	public String getUrgencyIndicator() {
-		return urgencyIndicator;
+	public SmartProbeObj getSmartProbeObj() {
+		return smartProbeObj;
 	}
-	public void setUrgencyIndicator(String urgencyIndicator) {
-		this.urgencyIndicator = urgencyIndicator;
-	}
-	public String getSmartProbeError() {
-		return smartProbeError;
-	}
-	public void setSmartProbeError(String smartProbeError) {
-		this.smartProbeError = smartProbeError;
-	}
-	public String getSmartProbeErrorQs() {
-		return smartProbeErrorQs;
-	}
-	public void setSmartProbeErrorQs(String smartProbeErrorQs) {
-		this.smartProbeErrorQs = smartProbeErrorQs;
+	public void setSmartProbeObj(SmartProbeObj smartProbeObj) {
+		this.smartProbeObj = smartProbeObj;
 	}
 	
-
 }
