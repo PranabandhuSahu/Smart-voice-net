@@ -2,7 +2,7 @@ package com.smartvoicenet.model;
 
 public class ExplainResult {
 	
-	private String inspectionResult;
+	private String inspectionResult; // Test
 	private String authScore;
 	private String repeatationIndicator;
 	private String grammaticalError;
