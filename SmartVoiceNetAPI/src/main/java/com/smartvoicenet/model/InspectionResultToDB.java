@@ -2,12 +2,18 @@ package com.smartvoicenet.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
+@Entity
 public class InspectionResultToDB {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "INSPECTION_SEQ")
+    @SequenceGenerator(sequenceName = "inspection_id_seq", allocationSize = 1, name = "INSPECTION_SEQ")
 	private String inspectionId;
 	private int phoneNumber;
 	private String inspectionResult;
@@ -40,9 +46,7 @@ public class InspectionResultToDB {
 	private Date callEndTime;
 	private Date protectionActionTime;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "INSPECTION_SEQ")
-    @SequenceGenerator(sequenceName = "inspection_id_seq", allocationSize = 1, name = "INSPECTION_SEQ")
+	
 	public String getInspectionId() {
 		return inspectionId;
 	}

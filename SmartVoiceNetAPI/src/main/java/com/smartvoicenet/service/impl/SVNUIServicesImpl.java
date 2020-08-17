@@ -15,17 +15,21 @@ public class SVNUIServicesImpl implements SVNUIServices{
 	private SVNRecordRepo svnRecordRepo;
 	
 	public ExplainResult getExplainResult(String recordID) {
-		svnRecordRepo.findById(recordID);
+		//will get all fields related to that particular record ID & 
+		//from that onjecct will filter Explanation Result object .
+		//InspectionResultToDB fetchedRecord = svnRecordRepo.findById(recordID);
 		return null;
 	}
 
 	public String updateInspectionResult(String recordID) {
-		// TODO Auto-generated method stub
+		// Need to create a user defined query of need to find out Spring data JPA method
+		//to update one particular record
+		
 		return null;
 	}
 
 	public String saveRecord(InspectionResultToDB recordObj) {
-		// TODO Auto-generated method stub
+		// need to send the auto-genarated ID to UI in response
 		return null;
 	}
 
