@@ -95,8 +95,9 @@ public class SVNUIServicesImpl implements SVNUIServices{
 	}
 
 	public String saveRecord(InspectionResultToDB recordObj) {
-		// need to send the auto-genarated ID to UI in response
-		return null;
+		// need to send auto-genarated ID to UI in response
+		return svnRecordRepo.save(recordObj).getInspectionId();
+		
 	}
 
 }
